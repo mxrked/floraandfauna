@@ -1,0 +1,13 @@
+.b2t {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+
+.b2t .icon {
+  color: white;
+}
+/*# sourceMappingURL=Js.module.css.map */

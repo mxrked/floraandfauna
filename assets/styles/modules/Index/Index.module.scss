@@ -1,0 +1,1123 @@
+// Imports
+@import "../../tools/themes/themes.scss";
+
+// Fonts
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../../../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("../../../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../../../fonts/Poppins-Regular.ttf");
+}
+
+// Desktop
+.top {
+  padding-top: 110px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  h1 {
+    font-family: "Poppins Bold";
+  }
+
+  p {
+    padding-top: 10px;
+    font-family: "Poppins Regular";
+    font-size: 15px;
+  }
+}
+
+.search {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  place-items: center;
+  padding-top: 30px;
+
+  div {
+    max-width: 450px;
+    height: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 91.5%;
+      height: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: "Poppins Regular";
+      font-size: 14px;
+      border: 2px solid black;
+      outline: none;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 40px;
+      height: 100%;
+      background-color: black;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  .reset_btn {
+    height: 50px;
+    width: 100%;
+    max-width: 140px;
+    font-family: "Poppins Medium";
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.plants_items_holder {
+  padding-top: 140px;
+  padding-bottom: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  .plants_items_holder_set {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+
+    .plant_item {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      .plant_item_row {
+        max-width: 1620px;
+        margin-left: 0;
+        width: 100%;
+        margin-right: auto;
+        .plant_item_side {
+          overflow: hidden;
+          height: 460px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // img {
+          //   max-width: 100%;
+          //   height: 100%;
+          //   max-height: 80%;
+          //   width: 100%;
+          //   margin-left: auto;
+          //   margin-right: auto;
+          // }
+
+          .plant_item_side_text {
+            padding-left: 50px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-left: 3px solid rgba(0, 0, 0, 0.095);
+          }
+
+          .img_holder {
+            height: 100%;
+
+            span {
+              position: absolute;
+              bottom: 80px;
+              left: 50%;
+              display: none;
+              transform: translateX(-50%);
+              text-align: center;
+              font-size: 14px;
+              font-family: "Poppins Regular";
+            }
+          }
+
+          div {
+            display: grid;
+            width: 100%;
+            position: relative;
+
+            img {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              max-width: 80%;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .name_hint {
+              font-family: "Poppins Medium";
+              margin-bottom: 5px;
+              opacity: 0.5;
+              font-size: 13px;
+            }
+
+            h3 {
+              font-size: 40px;
+              font-family: "Poppins Bold";
+              padding-bottom: 15px;
+            }
+
+            h5 {
+              font-family: "Poppins Medium";
+              font-size: 20px;
+              opacity: 0.7;
+              padding-bottom: 20px;
+            }
+
+            h3,
+            h5 {
+              text-transform: capitalize;
+            }
+
+            p {
+              font-family: "Poppins Regular";
+              font-size: 15px;
+              line-height: 23px;
+              padding-bottom: 20px;
+            }
+
+            a {
+              font-family: "Poppins Medium";
+              border: 2px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              max-width: 60px;
+              height: 40px;
+              color: black;
+              text-decoration: none;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button_holder {
+    margin-top: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 100%;
+      max-width: 150px;
+      height: 40px;
+      background-color: transparent;
+      color: black;
+      border: 2px solid black;
+      font-family: "Poppins Medium";
+    }
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+  .top {
+    max-width: 80%;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      padding-top: 20px;
+    }
+  }
+
+  .search {
+    max-width: 80%;
+  }
+
+  .plants_items_holder {
+    .plants_items_holder_set {
+      .plant_item {
+        .plant_item_row {
+          .plant_item_side {
+            .img_holder {
+              img {
+                max-width: 80%;
+              }
+            }
+
+            .plant_item_side_text {
+              h3 {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .button_holder {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .plants_items_holder {
+    padding-left: 0;
+    padding-right: 0;
+    .plants_items_holder_set {
+      .plant_item {
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 70%;
+              height: 100%;
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+              h3 {
+                font-size: 30px;
+              }
+
+              p {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 350px;
+          }
+
+          .plant_item_R {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+// Desktop Window (Smallest)
+@media all and (max-width: 768px) {
+  .top {
+    max-width: 70%;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 13px;
+    }
+  }
+
+  .search {
+    max-width: 80%;
+  }
+
+  .plants_items_holder {
+    padding-left: 0;
+    padding-right: 0;
+    .plants_items_holder_set {
+      .plant_item {
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 70%;
+              height: 100%;
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+              h3 {
+                font-size: 23px;
+              }
+
+              h5 {
+                font-size: 16px;
+              }
+
+              p {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 350px;
+          }
+
+          .plant_item_R {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Smaller Devices (Phones)
+@media all and (max-width: 419px) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 21px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 12px;
+      line-height: 23px;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 11px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 100%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 9px;
+              }
+
+              h3 {
+                font-size: 19px;
+              }
+
+              h5 {
+                font-size: 13px;
+              }
+
+              p {
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 12px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 200px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .top {
+    padding-top: 40px;
+    max-width: 90%;
+
+    h1 {
+      font-size: 23px;
+    }
+
+    p {
+      padding-top: 10px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    .plants_items_holder_set {
+      .plant_item {
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 70%;
+              height: 100%;
+
+              span {
+                bottom: 40px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 9px;
+              }
+
+              h3 {
+                font-size: 24px;
+              }
+
+              h5 {
+                font-size: 16px;
+              }
+
+              p {
+                max-width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 12px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 150px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 21px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 11px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 800px;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 50%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 13px;
+              }
+
+              h3 {
+                font-size: 27px;
+              }
+
+              h5 {
+                font-size: 20px;
+              }
+
+              p {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 250px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 21px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 11px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 500px;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 100%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 9px;
+              }
+
+              h3 {
+                font-size: 23px;
+              }
+
+              h5 {
+                font-size: 15px;
+              }
+
+              p {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 12px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 250px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 15px;
+      line-height: 23px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90%;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 12px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 800px;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 50%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 13px;
+              }
+
+              h3 {
+                font-size: 27px;
+              }
+
+              h5 {
+                font-size: 20px;
+              }
+
+              p {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 250px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 15px;
+      line-height: 23px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 12px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 800px;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 50%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 13px;
+              }
+
+              h3 {
+                font-size: 27px;
+              }
+
+              h5 {
+                font-size: 20px;
+              }
+
+              p {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 250px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .top {
+    padding-top: 70px;
+    max-width: 80%;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      padding-top: 20px;
+      font-size: 15px;
+      line-height: 23px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+    }
+  }
+
+  .search {
+    max-width: 85%;
+
+    div {
+      input {
+        font-size: 12px;
+      }
+    }
+
+    .reset_btn {
+      font-size: 15px;
+      width: 120px;
+    }
+  }
+
+  .plants_items_holder {
+    padding-top: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 800px;
+    .plants_items_holder_set {
+      .plant_item {
+        margin-bottom: 0;
+        .plant_item_row {
+          .plant_item_side {
+            position: relative;
+            width: 100%;
+            height: auto;
+            .img_holder {
+              position: relative;
+              max-width: 50%;
+              height: 100%;
+
+              span {
+                bottom: 10px;
+                font-size: 12px;
+              }
+            }
+
+            .plant_item_side_text {
+              text-align: center;
+              border: none;
+              padding: 0;
+
+              .name_hint {
+                font-size: 13px;
+              }
+
+              h3 {
+                font-size: 27px;
+              }
+
+              h5 {
+                font-size: 20px;
+              }
+
+              p {
+                max-width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 13px;
+              }
+
+              a {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+
+          .plant_item_L {
+            height: 250px;
+          }
+
+          .plant_item_R {
+            padding-top: 30px;
+            padding-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
