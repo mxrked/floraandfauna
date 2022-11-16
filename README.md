@@ -12,7 +12,7 @@ This is a informational website for a friend based on the different flora and fa
 
 ---
 
-https://fantastic-starburst-b0f940.netlify.app/
+Demo: https://fantastic-starburst-b0f940.netlify.app/
 
 ===
 
